@@ -1,0 +1,27 @@
+{
+  "synthetic_benign_controls": true,
+  "no_real_tool_execution": true,
+  "metrics": [
+    {
+      "defense": "none",
+      "cases": 4,
+      "errors": 0,
+      "successes": 4,
+      "blocked_calls": 0
+    },
+    {
+      "defense": "boundary",
+      "cases": 4,
+      "errors": 0,
+      "successes": 4,
+      "blocked_calls": 0
+    },
+    {
+      "defense": "layered",
+      "cases": 4,
+      "errors": 0,
+      "successes": 4,
+      "blocked_calls": 0
+    }
+  ]
+}

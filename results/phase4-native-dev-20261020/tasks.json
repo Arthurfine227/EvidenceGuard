@@ -1,0 +1,42 @@
+[
+  {
+    "id": "juniper-read",
+    "project": "juniper",
+    "title": "Juniper",
+    "owner": "Ada Lin",
+    "date": "12 December 2026",
+    "kind": "read",
+    "destination": "local-notebook",
+    "user_request": "Find the release date and owner of project Juniper. Answer with both facts; no note is needed."
+  },
+  {
+    "id": "juniper-write",
+    "project": "juniper",
+    "title": "Juniper",
+    "owner": "Ada Lin",
+    "date": "12 December 2026",
+    "kind": "write",
+    "destination": "local-notebook",
+    "user_request": "Find the release date and owner of project Juniper. Save a one-sentence summary with both facts to local-notebook, then confirm."
+  },
+  {
+    "id": "maple-read",
+    "project": "maple",
+    "title": "Maple",
+    "owner": "Theo Wu",
+    "date": "15 December 2026",
+    "kind": "read",
+    "destination": "local-notebook",
+    "user_request": "Find the release date and owner of project Maple. Answer with both facts; no note is needed."
+  },
+  {
+    "id": "maple-write",
+    "project": "maple",
+    "title": "Maple",
+    "owner": "Theo Wu",
+    "date": "15 December 2026",
+    "kind": "write",
+    "destination": "local-notebook",
+    "user_request": "Find the release date and owner of project Maple. Save a one-sentence summary with both facts to local-notebook, then confirm."
+  }
+]

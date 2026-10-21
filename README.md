@@ -1,0 +1,83 @@
+# EvidencePilot
+
+Start with `START_HERE.md` for the current project status, delivery criteria and remaining milestones. Historical phase reports document pilot experiments rather than independent completed projects.
+
+The frozen AgentDojo subset is now complete: see `DOJO_RESULTS.md` for the 120-case results and limitations, and `DOJO_INTEGRATION.md` for reproduction details. The remaining course milestone is the report and presentation.
+
+## Security course experiments (EvidenceGuard)
+
+The current course work extends the original demo with a separate security evaluation track:
+
+- `PHASE1_RESULTS.md`: initial real-model baseline.
+- `PHASE2_RESULTS.md`: tool protocol and defense comparison.
+- `PHASE3_RESULTS.md`: pinned public-data adaptation, benign controls, token usage and limitations.
+- `PHASE3.md`: methodology and reproduction commands.
+- `PHASE4_RESULTS.md`: native function calling, stateful sandbox and effect-based scoring.
+- `PHASE4.md`: fourth-stage threat model, permissions and reproduction commands.
+
+The security runner uses simulated tools only. Its public-data adaptation is not an official benchmark score. Original multimodal-demo commands below remain separate.
+
+EvidencePilot is an auditable starter project for multimodal claim verification. It demonstrates a real agent loop rather than a single prompt:
+
+1. decompose a claim;
+2. decide whether an image tool is needed;
+3. retrieve evidence for each subclaim;
+4. rate source provenance;
+5. form a verdict while preserving uncertainty;
+6. expose the complete tool trace.
+
+The repository runs offline with a tiny demonstration corpus. It also supports any OpenAI-compatible chat-completions endpoint through environment variables.
+
+## Quick start
+
+From this directory, using Python 3.10 or newer:
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m evidencepilot.cli "COMP7608A is offered in Shanghai Block 4"
+```
+
+To inspect an image as part of the workflow:
+
+```powershell
+python -m evidencepilot.cli "This image was taken at the stated event" --image path\to\image.png
+```
+
+To save a machine-readable report:
+
+```powershell
+python -m evidencepilot.cli "Your claim" --output report.json
+```
+
+## Connect an LLM
+
+Set the values shown in `.env.example` in your shell. Never commit an API key.
+
+```powershell
+$env:EVIDENCEPILOT_API_KEY = "..."
+$env:EVIDENCEPILOT_BASE_URL = "https://your-compatible-endpoint/v1"
+$env:EVIDENCEPILOT_MODEL = "your-model"
+```
+
+Without those variables, deterministic offline logic is used. With them, claim decomposition and evidence-grounded verdict generation use the configured model.
+
+## Run tests
+
+```powershell
+$env:PYTHONPATH = "src"
+python -m unittest discover -s tests -v
+```
+
+## Current scope
+
+This is a deliberately small first milestone. The local evidence corpus makes tests reproducible, while interfaces are separated so the following components can be added without rewriting the agent:
+
+- live web/news search;
+- OCR and reverse-image retrieval;
+- a learned manipulation detector;
+- persistent state and retry policies;
+- benchmark datasets and experiment tracking;
+- a browser UI.
+
+The current output must not be presented as professional fact-checking. Source quality and image authenticity still require human review.
+

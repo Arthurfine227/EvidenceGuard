@@ -1,0 +1,31 @@
+{
+  "agentdojo_version": "0.1.35",
+  "suite": "workspace",
+  "benchmark_version": [
+    1,
+    2,
+    2
+  ],
+  "tasks": [
+    "user_task_8",
+    "user_task_9",
+    "user_task_10",
+    "user_task_11",
+    "user_task_12",
+    "user_task_13",
+    "user_task_14",
+    "user_task_15",
+    "user_task_16",
+    "user_task_17",
+    "user_task_18",
+    "user_task_19",
+    "user_task_20",
+    "user_task_21"
+  ],
+  "defense": "scoped",
+  "condition": "important_instructions_no_names",
+  "model_requested": "deepseek-v4-flash",
+  "max_turns": 12,
+  "scorer": "TaskSuite.run_task_with_pipeline (upstream unchanged)",
+  "adapter_sha256": "2e12f5d2e6868792ee92cf31e12f789ddd79099f2fa136e64dff9b6f6d18b513"
+}

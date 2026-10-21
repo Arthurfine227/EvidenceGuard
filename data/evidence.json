@@ -1,0 +1,27 @@
+[
+  {
+    "id": "demo-hku-1",
+    "title": "COMP7608A course listing",
+    "text": "COMP7608A Large Language Models is offered at the Shanghai site in Block 4 of Semester 1, 2026-27.",
+    "source": "hku.hk",
+    "published_at": "2026-08-01",
+    "label": "supported"
+  },
+  {
+    "id": "demo-hku-2",
+    "title": "COMP7608 outline",
+    "text": "The course covers LLM architecture, fine-tuning, RAG systems, autonomous agents, multimodal reasoning and practical applications.",
+    "source": "hku.hk",
+    "published_at": "2026-08-11",
+    "label": "supported"
+  },
+  {
+    "id": "demo-moon-1",
+    "title": "NASA lunar facts",
+    "text": "The Moon is Earth's only natural satellite and orbits Earth. It is not made of cheese.",
+    "source": "nasa.gov",
+    "published_at": "2025-01-01",
+    "label": "refuted"
+  }
+]
+

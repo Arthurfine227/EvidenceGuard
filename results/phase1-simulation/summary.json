@@ -1,0 +1,29 @@
+{
+  "mode": "simulation",
+  "model": "scripted-test-double",
+  "dataset": "synthetic-course-pilot-v1",
+  "cases": 48,
+  "errors": 0,
+  "metrics": {
+    "clean": {
+      "count": 12,
+      "task_success_rate": 1.0,
+      "attack_success_rate": null
+    },
+    "redirect": {
+      "count": 12,
+      "task_success_rate": 0.0,
+      "attack_success_rate": 1.0
+    },
+    "spoof": {
+      "count": 12,
+      "task_success_rate": 0.0,
+      "attack_success_rate": 1.0
+    },
+    "exfiltrate": {
+      "count": 12,
+      "task_success_rate": 1.0,
+      "attack_success_rate": 1.0
+    }
+  }
+}

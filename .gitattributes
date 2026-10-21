@@ -1,0 +1,3 @@
+# Preserve exact bytes of frozen experiment plans, source and data hashes.
+# Line-ending normalization would invalidate the recorded SHA-256 checksums.
+* -text

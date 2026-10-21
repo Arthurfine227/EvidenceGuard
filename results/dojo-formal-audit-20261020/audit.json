@@ -1,0 +1,7 @@
+{
+  "checked_cases": 120,
+  "score_recomputation_passed": true,
+  "issues": [],
+  "api_calls": 0,
+  "scope": "recompute upstream utility/security from saved final states and proposed-call traces; not independent semantic ground truth"
+}

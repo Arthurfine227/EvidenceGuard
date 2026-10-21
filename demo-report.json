@@ -1,0 +1,85 @@
+{
+  "claim": "COMP7608A is offered in Shanghai Block 4",
+  "subclaims": [
+    "COMP7608A is offered in Shanghai Block 4"
+  ],
+  "verdict": "supported",
+  "confidence": 0.9,
+  "rationale": "The verdict is based on 1 relevance-filtered evidence item(s); source ratings remain visible for audit.",
+  "evidence": [
+    {
+      "evidence_id": "demo-hku-1",
+      "title": "COMP7608A course listing",
+      "text": "COMP7608A Large Language Models is offered at the Shanghai site in Block 4 of Semester 1, 2026-27.",
+      "source": "hku.hk",
+      "published_at": "2026-08-01",
+      "supports": "supported",
+      "score": 11.4466
+    },
+    {
+      "evidence_id": "demo-moon-1",
+      "title": "NASA lunar facts",
+      "text": "The Moon is Earth's only natural satellite and orbits Earth. It is not made of cheese.",
+      "source": "nasa.gov",
+      "published_at": "2025-01-01",
+      "supports": "refuted",
+      "score": 1.2877
+    }
+  ],
+  "trace": [
+    {
+      "step": 1,
+      "tool": "claim_decomposer",
+      "reason": "Break the input into searchable statements",
+      "status": "ok",
+      "output": {
+        "subclaims": [
+          "COMP7608A is offered in Shanghai Block 4"
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "tool": "evidence_search",
+      "reason": "Retrieve evidence for each subclaim",
+      "status": "ok",
+      "output": {
+        "matches": 2
+      }
+    },
+    {
+      "step": 3,
+      "tool": "source_rater",
+      "reason": "Rate provenance before forming a verdict",
+      "status": "ok",
+      "output": {
+        "ratings": [
+          {
+            "source": "hku.hk",
+            "reliability": "high",
+            "reason": "institutional_domain"
+          },
+          {
+            "source": "nasa.gov",
+            "reliability": "high",
+            "reason": "institutional_domain"
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "verifier",
+      "reason": "Aggregate evidence and preserve uncertainty",
+      "status": "ok",
+      "output": {
+        "verdict": "supported",
+        "confidence": 0.9
+      }
+    }
+  ],
+  "limitations": [
+    "The starter corpus is small and is not a live-web index.",
+    "Offline mode uses lexical retrieval and deterministic decision rules."
+  ]
+}

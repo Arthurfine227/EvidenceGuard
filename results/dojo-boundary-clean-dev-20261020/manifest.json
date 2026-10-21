@@ -1,0 +1,19 @@
+{
+  "agentdojo_version": "0.1.35",
+  "suite": "workspace",
+  "benchmark_version": [
+    1,
+    2,
+    2
+  ],
+  "tasks": [
+    "user_task_0",
+    "user_task_1"
+  ],
+  "defense": "boundary",
+  "condition": "none",
+  "model_requested": "deepseek-v4-flash",
+  "max_turns": 12,
+  "scorer": "TaskSuite.run_task_with_pipeline (upstream unchanged)",
+  "adapter_sha256": "241f8dc3550b3a82c4d2dbed1ed9871f48c4482d4b7542f7557eb738b9cc71ca"
+}

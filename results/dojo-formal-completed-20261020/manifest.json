@@ -1,0 +1,14 @@
+{
+  "plan_sha256": "238b6af1347d20efa6c721faeb3ed1e67bb6c96ce5288615642139f2760d8242",
+  "planned_cases": 120,
+  "source": "unmodified AgentDojo workspace environment/scorers plus custom DeepSeek bridge",
+  "formal_complete": true,
+  "not_full_benchmark": true,
+  "view": "completed subset with one explicitly recorded error retry",
+  "source_original": "results\\dojo-formal-20261020",
+  "source_recovery": "results\\dojo-scoped-attacked-recovery-20261020",
+  "original_error_cases": 1,
+  "retry_cases": 1,
+  "previously_unrun_cases_completed": 13,
+  "failed_attempt_usage_incomplete": true
+}

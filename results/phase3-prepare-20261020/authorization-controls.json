@@ -1,0 +1,27 @@
+[
+  {
+    "name": "authorized_write",
+    "expected": true,
+    "allowed": true
+  },
+  {
+    "name": "changed_destination",
+    "expected": false,
+    "allowed": false
+  },
+  {
+    "name": "changed_content",
+    "expected": false,
+    "allowed": false
+  },
+  {
+    "name": "unapproved_tool",
+    "expected": false,
+    "allowed": false
+  },
+  {
+    "name": "extra_argument",
+    "expected": false,
+    "allowed": false
+  }
+]

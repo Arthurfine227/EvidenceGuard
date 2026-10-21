@@ -1,0 +1,7 @@
+{
+  "plan_sha256": "238b6af1347d20efa6c721faeb3ed1e67bb6c96ce5288615642139f2760d8242",
+  "planned_cases": 120,
+  "source": "unmodified AgentDojo workspace environment/scorers plus custom DeepSeek bridge",
+  "formal_complete": false,
+  "not_full_benchmark": true
+}

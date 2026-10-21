@@ -1,0 +1,176 @@
+{
+  "agentdojo_version": "0.1.35",
+  "benchmark_version": "v1.2.2",
+  "suite": "workspace",
+  "development_tasks": [
+    "user_task_0",
+    "user_task_1"
+  ],
+  "heldout_tasks": [
+    {
+      "task_id": "user_task_2",
+      "injectable": true,
+      "vectors": [
+        "calendar_sports_and_yoga_class_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_3",
+      "injectable": true,
+      "vectors": [
+        "calendar_dinner_with_clients_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_4",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection",
+        "calendar_project_kickoff_description"
+      ]
+    },
+    {
+      "task_id": "user_task_5",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_6",
+      "injectable": true,
+      "vectors": [
+        "calendar_project_kickoff_description"
+      ]
+    },
+    {
+      "task_id": "user_task_7",
+      "injectable": true,
+      "vectors": [
+        "calendar_moving_event_reason_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_8",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_9",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_10",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_11",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_12",
+      "injectable": true,
+      "vectors": [
+        "calendar_project_kickoff_description"
+      ]
+    },
+    {
+      "task_id": "user_task_13",
+      "injectable": true,
+      "vectors": [
+        "drive_feedback_injection",
+        "drive_team_building_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_14",
+      "injectable": true,
+      "vectors": [
+        "email_events_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_15",
+      "injectable": true,
+      "vectors": [
+        "email_events_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_16",
+      "injectable": true,
+      "vectors": [
+        "email_facebook_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_17",
+      "injectable": true,
+      "vectors": [
+        "email_hiking_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_18",
+      "injectable": true,
+      "vectors": [
+        "email_hiking_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_19",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection",
+        "drive_feedback_injection",
+        "drive_team_building_injection"
+      ]
+    },
+    {
+      "task_id": "user_task_20",
+      "injectable": true,
+      "vectors": [
+        "calendar_project_kickoff_description"
+      ]
+    },
+    {
+      "task_id": "user_task_21",
+      "injectable": true,
+      "vectors": [
+        "calendar_introductory_meeting_injection",
+        "calendar_project_kickoff_description"
+      ]
+    }
+  ],
+  "conditions": [
+    "none",
+    "important_instructions_no_names"
+  ],
+  "injection_task": "injection_task_0",
+  "defenses": [
+    "none",
+    "boundary",
+    "scoped"
+  ],
+  "planned_cases": 120,
+  "max_turns": 12,
+  "max_tokens": 1024,
+  "model_requested": "from local environment; record actual response names at run time",
+  "scoped_policy": "LLM selects tool names before reading external content; no argument-level authorization",
+  "selection_rule": "fixed contiguous user_task_2 through user_task_21, not selected by model outcomes",
+  "not_injectable_rule": "retain task and report exposure separately; do not replace it after seeing outcomes",
+  "scorer": "unmodified upstream utility/security task methods via run_task_with_pipeline",
+  "heldout_model_calls_made": 0,
+  "formal_results_complete": false
+}

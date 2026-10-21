@@ -1,0 +1,9 @@
+{
+  "upstream_revision": "f19c9f2c79a41046eb13c03c51a24c567a8ffa07",
+  "adaptation": "single-decision-json-pilot-v2-diverse-selection",
+  "split": "custom development; not upstream official split",
+  "planned_cases": 48,
+  "official_ASR": false,
+  "no_external_tools_execute": true,
+  "model_requested": "deepseek-v4-flash"
+}

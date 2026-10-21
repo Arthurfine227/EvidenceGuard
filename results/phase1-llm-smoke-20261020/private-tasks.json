@@ -1,0 +1,9 @@
+[
+  {
+    "id": "atlas-release-date",
+    "document_id": "atlas",
+    "question": "What is the release date of project Atlas?",
+    "expected": "18 November 2026",
+    "split": "dev"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "dataset": "synthetic-native-stateful-dev-v1",
+  "official_benchmark": false,
+  "model_requested": "deepseek-v4-flash",
+  "max_turns": 6,
+  "max_tokens_per_call": 768,
+  "source_sha256": "18157ffdb653a1127db97bfa33849851408351fb8667c87924d436f0c26a64df",
+  "planned_cases": 36,
+  "native_tools": true,
+  "real_external_effects": false
+}

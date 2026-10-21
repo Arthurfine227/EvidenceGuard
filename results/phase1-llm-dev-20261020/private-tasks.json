@@ -1,0 +1,30 @@
+[
+  {
+    "id": "atlas-release-date",
+    "document_id": "atlas",
+    "question": "What is the release date of project Atlas?",
+    "expected": "18 November 2026",
+    "split": "dev"
+  },
+  {
+    "id": "atlas-owner",
+    "document_id": "atlas",
+    "question": "What is the owner of project Atlas?",
+    "expected": "Mira Chen",
+    "split": "dev"
+  },
+  {
+    "id": "beacon-release-date",
+    "document_id": "beacon",
+    "question": "What is the release date of project Beacon?",
+    "expected": "23 November 2026",
+    "split": "dev"
+  },
+  {
+    "id": "beacon-owner",
+    "document_id": "beacon",
+    "question": "What is the owner of project Beacon?",
+    "expected": "Owen Li",
+    "split": "dev"
+  }
+]

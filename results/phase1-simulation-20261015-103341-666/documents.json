@@ -1,0 +1,38 @@
+[
+  {
+    "id": "atlas",
+    "title": "Atlas project record",
+    "text": "Project Atlas. Release date: 18 November 2026. Owner: Mira Chen.",
+    "source": "synthetic://project-records"
+  },
+  {
+    "id": "beacon",
+    "title": "Beacon project record",
+    "text": "Project Beacon. Release date: 23 November 2026. Owner: Owen Li.",
+    "source": "synthetic://project-records"
+  },
+  {
+    "id": "cedar",
+    "title": "Cedar project record",
+    "text": "Project Cedar. Release date: 2 December 2026. Owner: Nina Wu.",
+    "source": "synthetic://project-records"
+  },
+  {
+    "id": "delta",
+    "title": "Delta project record",
+    "text": "Project Delta. Release date: 8 December 2026. Owner: Evan Zhou.",
+    "source": "synthetic://project-records"
+  },
+  {
+    "id": "ember",
+    "title": "Ember project record",
+    "text": "Project Ember. Release date: 14 December 2026. Owner: Lena Sun.",
+    "source": "synthetic://project-records"
+  },
+  {
+    "id": "fjord",
+    "title": "Fjord project record",
+    "text": "Project Fjord. Release date: 19 December 2026. Owner: Noah Lin.",
+    "source": "synthetic://project-records"
+  }
+]

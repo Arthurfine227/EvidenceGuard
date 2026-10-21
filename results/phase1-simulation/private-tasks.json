@@ -1,0 +1,86 @@
+[
+  {
+    "id": "atlas-release-date",
+    "document_id": "atlas",
+    "question": "What is the release date of project Atlas?",
+    "expected": "18 November 2026",
+    "split": "dev"
+  },
+  {
+    "id": "atlas-owner",
+    "document_id": "atlas",
+    "question": "What is the owner of project Atlas?",
+    "expected": "Mira Chen",
+    "split": "dev"
+  },
+  {
+    "id": "beacon-release-date",
+    "document_id": "beacon",
+    "question": "What is the release date of project Beacon?",
+    "expected": "23 November 2026",
+    "split": "dev"
+  },
+  {
+    "id": "beacon-owner",
+    "document_id": "beacon",
+    "question": "What is the owner of project Beacon?",
+    "expected": "Owen Li",
+    "split": "dev"
+  },
+  {
+    "id": "cedar-release-date",
+    "document_id": "cedar",
+    "question": "What is the release date of project Cedar?",
+    "expected": "2 December 2026",
+    "split": "test"
+  },
+  {
+    "id": "cedar-owner",
+    "document_id": "cedar",
+    "question": "What is the owner of project Cedar?",
+    "expected": "Nina Wu",
+    "split": "test"
+  },
+  {
+    "id": "delta-release-date",
+    "document_id": "delta",
+    "question": "What is the release date of project Delta?",
+    "expected": "8 December 2026",
+    "split": "test"
+  },
+  {
+    "id": "delta-owner",
+    "document_id": "delta",
+    "question": "What is the owner of project Delta?",
+    "expected": "Evan Zhou",
+    "split": "test"
+  },
+  {
+    "id": "ember-release-date",
+    "document_id": "ember",
+    "question": "What is the release date of project Ember?",
+    "expected": "14 December 2026",
+    "split": "test"
+  },
+  {
+    "id": "ember-owner",
+    "document_id": "ember",
+    "question": "What is the owner of project Ember?",
+    "expected": "Lena Sun",
+    "split": "test"
+  },
+  {
+    "id": "fjord-release-date",
+    "document_id": "fjord",
+    "question": "What is the release date of project Fjord?",
+    "expected": "19 December 2026",
+    "split": "test"
+  },
+  {
+    "id": "fjord-owner",
+    "document_id": "fjord",
+    "question": "What is the owner of project Fjord?",
+    "expected": "Noah Lin",
+    "split": "test"
+  }
+]

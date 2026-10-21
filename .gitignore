@@ -1,0 +1,16 @@
+.venv/
+.venv-dojo/
+__pycache__/
+*.egg-info/
+.env
+.env.local
+.env.*
+!.env.example
+*.pem
+*.key
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+# Local frozen copies duplicate the tracked source and results.
+release/
