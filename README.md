@@ -1,4 +1,17 @@
-# EvidencePilot
+# EvidenceGuard
+
+Tool-using LLM security evaluation for COMP7611, HKU School of Computing and Data Science. The Python package retains its original name `evidencepilot`.
+
+## Start here for teammates
+
+- [Teammate setup and reproduction guide](TEAM_SETUP.md): access, installation, offline checks and optional paid runs.
+- [Presentation with English speaker notes](presentation/EvidenceGuard_HKU_CDS.pptx): download and open in PowerPoint.
+- [Detailed illustrated project guide](TEAMMATE_GUIDE.html): download and open locally in a browser.
+- [Formal results and limitations](DOJO_RESULTS.md): 20 fixed tasks, 120 valid cases. No observed security gain over the baseline.
+
+No API key is needed to read the saved results or run the local verification tests. This repository is private. The owner must invite each teammate before they can access these links or clone it.
+
+The sections below retain the original prototype documentation. For the current security project, follow the teammate guide above.
 
 Start with `START_HERE.md` for the current project status, delivery criteria and remaining milestones. Historical phase reports document pilot experiments rather than independent completed projects.
 
