@@ -1,0 +1,30 @@
+[
+  {
+    "suite": "tests",
+    "returncode": 0,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "api_calls": 0
+  },
+  {
+    "suite": "tests_dojo",
+    "returncode": 0,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests_dojo",
+      "-v"
+    ],
+    "api_calls": 0
+  }
+]

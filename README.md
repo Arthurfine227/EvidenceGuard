@@ -4,6 +4,8 @@ Tool-using LLM security evaluation for COMP7611, HKU School of Computing and Dat
 
 ## Start here for teammates
 
+**2026-10-30 update:** the Pro follow-up is complete. Read [second-model findings](MODEL_COMPARISON_RESULTS.md) and the [frozen process and budget protocol](MODEL_COMPARISON_PROTOCOL.md). Pro has 3/20 official baseline attack successes and 0/20 in both defense groups. A separate, explicitly post-hoc state diagnostic finds 6/20 baseline target-email effects. Scoped loses a legitimate delegated task and shows no extra security gain over the boundary reminder. The existing slide deck below covers the historical Flash run, not these new results.
+
 - [Teammate setup and reproduction guide](TEAM_SETUP.md): access, installation, offline checks and optional paid runs.
 - [Presentation with English speaker notes](presentation/EvidenceGuard_HKU_CDS.pptx): download and open in PowerPoint.
 - [Detailed illustrated project guide](TEAMMATE_GUIDE.html): download and open locally in a browser.

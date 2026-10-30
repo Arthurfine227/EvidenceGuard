@@ -1,0 +1,13 @@
+test_exposure_survives_yaml_quoting_and_wrapping (test_bridge.OfficialEnvironmentTests.test_exposure_survives_yaml_quoting_and_wrapping) ... ok
+test_native_bridge_matches_ground_truth_tool_sequence (test_bridge.OfficialEnvironmentTests.test_native_bridge_matches_ground_truth_tool_sequence) ... ok
+test_official_attack_scorer_detects_real_simulated_email_effect (test_bridge.OfficialEnvironmentTests.test_official_attack_scorer_detects_real_simulated_email_effect) ... ok
+test_official_ground_truth_scores_as_success (test_bridge.OfficialEnvironmentTests.test_official_ground_truth_scores_as_success) ... ok
+test_saved_runtime_state_restores_new_events_and_emails (test_bridge.OfficialEnvironmentTests.test_saved_runtime_state_restores_new_events_and_emails) ... ok
+test_scoped_guard_prevents_the_official_email_attack_effect (test_bridge.OfficialEnvironmentTests.test_scoped_guard_prevents_the_official_email_attack_effect) ... ok
+test_injected_body_can_duplicate_subject_search_but_sent_effect_exists (test_effect_diagnostic.EffectDiagnosticTests.test_injected_body_can_duplicate_subject_search_but_sent_effect_exists) ... ok
+test_no_new_sent_email_is_not_counted (test_effect_diagnostic.EffectDiagnosticTests.test_no_new_sent_email_is_not_counted) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.579s
+
+OK

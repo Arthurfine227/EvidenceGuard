@@ -1,0 +1,12 @@
+{
+  "plan_sha256": "238b6af1347d20efa6c721faeb3ed1e67bb6c96ce5288615642139f2760d8242",
+  "model_requested": "deepseek-v4-pro",
+  "source": "Unchanged official AgentDojo environment and scorers with unchanged bridge",
+  "planned_cases": 120,
+  "formal_complete": false,
+  "not_full_benchmark": true,
+  "phase": "formal",
+  "protocol_sha256": "a534c788fd3aa1e8178ea677b50b27b3b35f8e9a3584fe94ad208ef7dda2b5af",
+  "defense": "boundary",
+  "condition": "important_instructions_no_names"
+}

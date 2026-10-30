@@ -1,6 +1,8 @@
 # EvidenceGuard teammate guide
 
-This is a tool-using LLM security evaluation project for COMP7611 at HKU CDS. The formal experiment compares three policies on a fixed AgentDojo workspace subset. It contains 20 task IDs and 120 valid cases, not 120 independent tasks. All policies have zero observed attack successes, so the results do not establish an additional security benefit.
+Latest results: the 2026-10-30 Pro follow-up adds another 120 formal cases. Read `MODEL_COMPARISON_RESULTS.md` first and `MODEL_COMPARISON_PROTOCOL.md` for its audit/reproduction commands. The historical Flash presentation below does not include this follow-up. Local tests now include 30 base and 8 integration/diagnostic tests. The historical counts later in this file describe the original release.
+
+This is a tool-using LLM security evaluation project for COMP7611 at HKU CDS. The original Flash experiment compares three policies on a fixed AgentDojo workspace subset. It contains 20 task IDs and 120 valid cases, not 120 independent tasks. All Flash policies have zero observed attack successes, so that historical run does not establish an additional security benefit. The Pro follow-up linked above has different outcomes and a separate 120-case record.
 
 ## 1 Get access and view the materials
 

@@ -1,0 +1,35 @@
+test_abstains_without_evidence (test_agent.VerificationAgentTests.test_abstains_without_evidence) ... ok
+test_inspects_supplied_image (test_agent.VerificationAgentTests.test_inspects_supplied_image) ... ok
+test_retrieves_course_evidence (test_agent.VerificationAgentTests.test_retrieves_course_evidence) ... ok
+test_changed_destination_fails_and_is_blocked (test_benign_eval.BenignControlTests.test_changed_destination_fails_and_is_blocked) ... ok
+test_exact_authorized_write_is_successful (test_benign_eval.BenignControlTests.test_exact_authorized_write_is_successful) ... ok
+test_refusal_is_not_counted_as_legitimate_write_success (test_benign_eval.BenignControlTests.test_refusal_is_not_counted_as_legitimate_write_success) ... ok
+test_reserve_persist_and_settle (test_comparison_budget.ComparisonBudgetTests.test_reserve_persist_and_settle) ... ok
+test_unknown_usage_keeps_reservation_and_limit_prevents_send (test_comparison_budget.ComparisonBudgetTests.test_unknown_usage_keeps_reservation_and_limit_prevents_send) ... ok
+test_allows_read_but_blocks_write (test_defenses.PolicyTests.test_allows_read_but_blocks_write) ... ok
+test_layered_policy_blocks_actual_execution_but_records_attempt (test_defenses.PolicyTests.test_layered_policy_blocks_actual_execution_but_records_attempt) ... ok
+test_redacts_only_exact_canary (test_defenses.PolicyTests.test_redacts_only_exact_canary) ... ok
+test_dynamic_legitimate_write_and_changed_destination (test_phase4.StatefulSandboxTests.test_dynamic_legitimate_write_and_changed_destination) ... ok
+test_multistep_attempt_effect_and_blocking_are_distinct (test_phase4.StatefulSandboxTests.test_multistep_attempt_effect_and_blocking_are_distinct) ... ok
+test_read_only_task_does_not_allow_local_write (test_phase4.StatefulSandboxTests.test_read_only_task_does_not_allow_local_write) ... ok
+test_secret_never_appears_in_public_record (test_phase4.StatefulSandboxTests.test_secret_never_appears_in_public_record) ... ok
+test_tool_call_budget_does_not_count_as_task_completion (test_phase4.StatefulSandboxTests.test_tool_call_budget_does_not_count_as_task_completion) ... ok
+test_deepseek_request_and_structured_response (test_providers.ProviderTests.test_deepseek_request_and_structured_response) ... ok
+test_invalid_json_has_specific_message (test_providers.ProviderTests.test_invalid_json_has_specific_message) ... ok
+test_native_tool_call_preserves_id_and_history (test_providers.ProviderTests.test_native_tool_call_preserves_id_and_history) ... ok
+test_timeout_has_specific_message (test_providers.ProviderTests.test_timeout_has_specific_message) ... ok
+test_attempt_and_enforcement_are_distinct (test_public_adapter.PublicAdapterTests.test_attempt_and_enforcement_are_distinct) ... ok
+test_legitimate_write_and_mutations (test_public_adapter.PublicAdapterTests.test_legitimate_write_and_mutations) ... ok
+test_pinned_subset_and_no_labels_in_model_input (test_public_adapter.PublicAdapterTests.test_pinned_subset_and_no_labels_in_model_input) ... ok
+test_detects_false_success (test_release_audit.AuditTests.test_detects_false_success) ... ok
+test_detects_unrecorded_effect_and_unmatched_tool_result (test_release_audit.AuditTests.test_detects_unrecorded_effect_and_unmatched_tool_result) ... ok
+test_existing_native_run_passes (test_release_audit.AuditTests.test_existing_native_run_passes) ... ok
+test_attack_does_not_contain_private_secret (test_security_eval.SecurityEvaluationTests.test_attack_does_not_contain_private_secret) ... ok
+test_fake_provider_runs_real_tool_loop_without_labels (test_security_eval.SecurityEvaluationTests.test_fake_provider_runs_real_tool_loop_without_labels) ... ok
+test_labels_are_not_exposed_in_documents (test_security_eval.SecurityEvaluationTests.test_labels_are_not_exposed_in_documents) ... ok
+test_scoring_distinguishes_clean_hijack_and_leak (test_security_eval.SecurityEvaluationTests.test_scoring_distinguishes_clean_hijack_and_leak) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.104s
+
+OK
