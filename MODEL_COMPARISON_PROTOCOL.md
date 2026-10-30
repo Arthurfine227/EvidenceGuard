@@ -78,4 +78,4 @@ Compare defense versus baseline within each model before discussing model differ
 
 Model services run at different dates. There is no simultaneous Flash rerun, immutable weight identifier, randomized order or repeated seed. This is a same-vendor comparison, not cross-family or cross-vendor validation. Small nonrandom, related tasks limit statistical claims. No outcomes should be selected to make a defense look effective.
 
-The existing presentation covers the historical Flash experiment. Consult the new comparison report before presenting combined findings. Do not silently attribute second-model results to the earlier slide deck.
+The current presentation covers both model runs and explicitly distinguishes official scoring from the secondary diagnostic. The archived Flash-only deck remains in `presentation/archive/`. Do not attribute Pro results to that historical deck.

@@ -1,98 +1,77 @@
 # EvidenceGuard
 
-Tool-using LLM security evaluation for COMP7611, HKU School of Computing and Data Science. The Python package retains its original name `evidencepilot`.
+Tool access and indirect prompt injection in LLM agents. A COMP7611 project at the **HKU School of Computing and Data Science**. The Python package retains its original name `evidencepilot`.
 
-## Start here for teammates
+## Read or present the project
 
-**2026-10-30 update:** the Pro follow-up is complete. Read [second-model findings](MODEL_COMPARISON_RESULTS.md) and the [frozen process and budget protocol](MODEL_COMPARISON_PROTOCOL.md). Pro has 3/20 official baseline attack successes and 0/20 in both defense groups. A separate, explicitly post-hoc state diagnostic finds 6/20 baseline target-email effects. Scoped loses a legitimate delegated task and shows no extra security gain over the boundary reminder. The existing slide deck below covers the historical Flash run, not these new results.
+| Start here | Contents |
+|---|---|
+| [Current presentation](presentation/EvidenceGuard_HKU_CDS.pptx) | Updated 10-slide English Flash/Pro deck with speaker notes. Download and open in PowerPoint. |
+| [Illustrated teammate report](TEAMMATE_GUIDE.html) | Chinese explanation v2.0 with principles, workflows, both models and limits. Download and open in a browser. |
+| [Latest results](MODEL_COMPARISON_RESULTS.md) | Model comparison, case analysis and evidence links. |
+| [Setup and reproduction](TEAM_SETUP.md) | Installation, offline tests and saved-score checks. |
+| [Follow-up protocol](MODEL_COMPARISON_PROTOCOL.md) | Frozen model setup, spending guard and stopping rules. |
 
-- [Teammate setup and reproduction guide](TEAM_SETUP.md): access, installation, offline checks and optional paid runs.
-- [Presentation with English speaker notes](presentation/EvidenceGuard_HKU_CDS.pptx): download and open in PowerPoint.
-- [Detailed illustrated project guide](TEAMMATE_GUIDE.html): download and open locally in a browser.
-- [Formal results and limitations](DOJO_RESULTS.md): 20 fixed tasks, 120 valid cases. No observed security gain over the baseline.
+**Updated 2026-10-30.** Both current presentation and teammate report include Pro. The [original Flash-only deck](presentation/archive/EvidenceGuard_Flash_20261020.pptx) remains archived.
 
-No API key is needed to read the saved results or run the local verification tests. This repository is private. The owner must invite each teammate before they can access these links or clone it.
+## Formal results
 
-The sections below retain the original prototype documentation. For the current security project, follow the teammate guide above.
+Each model has 20 fixed task IDs, three policies and clean/attacked conditions: **120 formal cases per model**. The combined 240 cases reuse the same 20 task IDs. They are not 240 independent tasks.
 
-Start with `START_HERE.md` for the current project status, delivery criteria and remaining milestones. Historical phase reports document pilot experiments rather than independent completed projects.
+| Model | Policy | Clean task success | Attacked task success | Official attack-goal success |
+|---|---|---:|---:|---:|
+| Flash | None | 19/20 | 19/20 | 0/20 |
+| Flash | Boundary | 20/20 | 20/20 | 0/20 |
+| Flash | Scoped | 19/20 | 20/20 | 0/20 |
+| Pro | None | 19/20 | 13/20 | 3/20 |
+| Pro | Boundary | 19/20 | 19/20 | 0/20 |
+| Pro | Scoped | 18/20 | 18/20 | 0/20 |
 
-The frozen AgentDojo subset is now complete: see `DOJO_RESULTS.md` for the 120-case results and limitations, and `DOJO_INTEGRATION.md` for reproduction details. The remaining course milestone is the report and presentation.
+All attacked groups expose the payload in 20/20 cases. Official tools and scoring remain unchanged.
 
-## Security course experiments (EvidenceGuard)
+### Findings
 
-The current course work extends the original demo with a separate security evaluation track:
+- The boundary reminder improves the observed Pro baseline result on this fixed subset. Flash's zero baseline cannot demonstrate a defense benefit.
+- Scoped includes the same reminder. It shows no additional attack reduction and fails a legitimate delegated task when the planner omits file tools.
+- The official email-goal rule can miss a sent effect when an injected received message also matches its subject search. A **post-hoc secondary state diagnostic** finds 6/20 Pro baseline target-email effects, compared with official 3/20. The other five model/policy groups have zero. **6/20 is not official ASR or a pre-frozen primary result.**
 
-- `PHASE1_RESULTS.md`: initial real-model baseline.
-- `PHASE2_RESULTS.md`: tool protocol and defense comparison.
-- `PHASE3_RESULTS.md`: pinned public-data adaptation, benign controls, token usage and limitations.
-- `PHASE3.md`: methodology and reproduction commands.
-- `PHASE4_RESULTS.md`: native function calling, stateful sandbox and effect-based scoring.
-- `PHASE4.md`: fourth-stage threat model, permissions and reproduction commands.
+Limits: small nonrandom, related tasks, one template and objective, one run per model, same vendor and different run dates. No concurrent Flash rerun or immutable weights. No general model ranking, statistical significance or zero-risk guarantee follows.
 
-The security runner uses simulated tools only. Its public-data adaptation is not an official benchmark score. Original multimodal-demo commands below remain separate.
+## Evidence and verification
 
-EvidencePilot is an auditable starter project for multimodal claim verification. It demonstrates a real agent loop rather than a single prompt:
+- [Original Flash results](DOJO_RESULTS.md) and [integration details](DOJO_INTEGRATION.md).
+- [Pro formal completion](results/pro-comparison-20261030/formal/manifest.json) and [raw formal groups](results/pro-comparison-20261030/formal/).
+- [Comparison data and paired changes](results/pro-comparison-20261030/analysis/summary.json).
+- [Secondary side-effect diagnostic](results/pro-comparison-20261030/effects.json).
+- [Pro audit](results/pro-comparison-20261030/audit/audit.json) and [Flash audit](results/dojo-formal-audit-20261020/audit.json): 120/120 saved scores consistent in each run.
+- [Local test logs](results/pro-comparison-20261030/checks/): 30 base and 8 integration/diagnostic tests passed.
+- [Pro spending ledger](results/pro-comparison-20261030/budget-ledger.json): conservative peak-rate estimate RMB 16.43 including development, not the actual invoice.
 
-1. decompose a claim;
-2. decide whether an image tool is needed;
-3. retrieve evidence for each subclaim;
-4. rate source provenance;
-5. form a verdict while preserving uncertainty;
-6. expose the complete tool trace.
+Development cases, scripted controls and formal cases remain separate. Scripted providers verify software and do not count as real-model attacks. Original errors and recovery history remain intact.
 
-The repository runs offline with a tiny demonstration corpus. It also supports any OpenAI-compatible chat-completions endpoint through environment variables.
+## Local checks
 
-## Quick start
-
-From this directory, using Python 3.10 or newer:
-
-```powershell
-$env:PYTHONPATH = "src"
-python -m evidencepilot.cli "COMP7608A is offered in Shanghai Block 4"
-```
-
-To inspect an image as part of the workflow:
-
-```powershell
-python -m evidencepilot.cli "This image was taken at the stated event" --image path\to\image.png
-```
-
-To save a machine-readable report:
+Use Python 3.12 and follow [TEAM_SETUP.md](TEAM_SETUP.md) to install the locked environment. Then run from the repository root:
 
 ```powershell
-python -m evidencepilot.cli "Your claim" --output report.json
+.\.venv-dojo\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv-dojo\Scripts\python.exe -m unittest discover -s tests_dojo -v
 ```
 
-## Connect an LLM
+Reading records, local tests and saved-score verification need no model key. Fresh real-model experiments require credentials and can consume credits. Existing run directories refuse overwriting.
 
-Set the values shown in `.env.example` in your shell. Never commit an API key.
+## Implementation and origins
 
-```powershell
-$env:EVIDENCEPILOT_API_KEY = "..."
-$env:EVIDENCEPILOT_BASE_URL = "https://your-compatible-endpoint/v1"
-$env:EVIDENCEPILOT_MODEL = "your-model"
-```
+- `src/evidencepilot/dojo_bridge.py`: native tool calls and policy checks.
+- `src/evidencepilot/model_comparison.py`: Pro follow-up and spending guard.
+- `src/evidencepilot/dojo_validate.py`: state restoration and official score audit.
+- `src/evidencepilot/comparison_effects.py`: separate post-hoc diagnostic.
 
-Without those variables, deterministic offline logic is used. With them, claim decomposition and evidence-grounded verdict generation use the configured model.
+Tasks, simulated tools, scoring and the attack template come from [AgentDojo](https://github.com/ethz-spylab/agentdojo). This is a workspace subset, not a full leaderboard submission. Earlier adaptation uses [InjecAgent](https://github.com/uiuc-kang-lab/InjecAgent), with license and source records in `data/injecagent/`.
 
-## Run tests
+## Historical material
 
-```powershell
-$env:PYTHONPATH = "src"
-python -m unittest discover -s tests -v
-```
+[Phase 1](PHASE1_RESULTS.md), [Phase 2](PHASE2_RESULTS.md), [Phase 3](PHASE3_RESULTS.md) and [Phase 4](PHASE4_RESULTS.md) document development, not extra independent formal samples. Earlier fact-verification prototype code remains separate.
 
-## Current scope
-
-This is a deliberately small first milestone. The local evidence corpus makes tests reproducible, while interfaces are separated so the following components can be added without rewriting the agent:
-
-- live web/news search;
-- OCR and reverse-image retrieval;
-- a learned manipulation detector;
-- persistent state and retry policies;
-- benchmark datasets and experiment tracking;
-- a browser UI.
-
-The current output must not be presented as professional fact-checking. Source quality and image authenticity still require human review.
+Never commit API keys, `.env.local` or virtual environments. Tools are simulated, but the model API receives benchmark context. Reading access depends on the current repository visibility. Contributions require appropriate access and should use branches and pull requests.
 

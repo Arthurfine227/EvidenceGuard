@@ -1,17 +1,17 @@
 # EvidenceGuard teammate guide
 
-Latest results: the 2026-10-30 Pro follow-up adds another 120 formal cases. Read `MODEL_COMPARISON_RESULTS.md` first and `MODEL_COMPARISON_PROTOCOL.md` for its audit/reproduction commands. The historical Flash presentation below does not include this follow-up. Local tests now include 30 base and 8 integration/diagnostic tests. The historical counts later in this file describe the original release.
+Latest release: the current 10-slide presentation and Chinese illustrated report both include the 2026-10-30 Pro follow-up. Read `MODEL_COMPARISON_RESULTS.md` first and `MODEL_COMPARISON_PROTOCOL.md` for audit/reproduction commands. Local tests now include 30 base and 8 integration/diagnostic tests.
 
 This is a tool-using LLM security evaluation project for COMP7611 at HKU CDS. The original Flash experiment compares three policies on a fixed AgentDojo workspace subset. It contains 20 task IDs and 120 valid cases, not 120 independent tasks. All Flash policies have zero observed attack successes, so that historical run does not establish an additional security benefit. The Pro follow-up linked above has different outcomes and a separate 120-case record.
 
 ## 1 Get access and view the materials
 
-The repository is private: <https://github.com/Arthurfine227/EvidenceGuard>.
+Repository: <https://github.com/Arthurfine227/EvidenceGuard>. If public, reading and downloading need no invitation or account. If access is restricted, request an invitation from the owner and accept it using the correct GitHub account. Contributions still require appropriate permissions.
 
-1. Send your GitHub username to the repository owner.
-2. Accept the invitation while signed in to that GitHub account.
+1. Open the repository link. If GitHub denies access, confirm its current visibility with the owner.
+2. For restricted access or code collaboration, send your username to the owner and accept the invitation.
 3. Read `DOJO_RESULTS.md` and this guide on GitHub.
-4. Download `presentation/EvidenceGuard_HKU_CDS.pptx` and open it in PowerPoint. Speaker notes contain the English presentation script and evidence sources. Add the actual team member names before presenting.
+4. Download `presentation/EvidenceGuard_HKU_CDS.pptx` and open it in PowerPoint. This is the current 10-slide Flash/Pro deck. Speaker notes contain the English script and sources. Add actual team names before presenting. The Flash-only historical deck is in `presentation/archive/`.
 5. Download `TEAMMATE_GUIDE.html` and open it in a browser for the illustrated explanation. GitHub normally shows HTML source rather than rendering the report.
 
 For the HTML report's relative evidence links to work, keep the whole repository directory. The report text and diagrams work when the HTML file is shared alone.
@@ -50,7 +50,7 @@ On macOS/Linux, create the environment with `python3.12 -m venv .venv-dojo` and 
 .\.venv-dojo\Scripts\python.exe -m unittest discover -s tests_dojo -v
 ```
 
-The recorded suite contains 28 base tests and 6 official integration tests. Controlled providers in tests are scripted software checks, not additional real-model attack experiments.
+The current recorded suite contains 30 base tests and 8 integration/diagnostic tests. Controlled providers are scripted checks, not additional real-model attack experiments. The original Flash release had 28 plus 6 tests.
 
 Recompute the saved formal scores without sending any model requests:
 
